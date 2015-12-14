@@ -8,20 +8,20 @@
  * file that was distributed with this source code.
  */
 
-namespace Unity\CachetSlackIntegration;
+namespace Mrbase\CachetSlackIntegration;
 
 use CachetHQ\Cachet\Models\Component;
 use CachetHQ\Cachet\Models\Incident;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
-use Unity\CachetSlackIntegration\Handlers\Events\Component\ComponentUpdated;
-use Unity\CachetSlackIntegration\Handlers\Events\Incident\IncidentReported;
-use Unity\CachetSlackIntegration\Handlers\Events\Incident\IncidentUpdated;
+use Mrbase\CachetSlackIntegration\Handlers\Events\Component\ComponentUpdated;
+use Mrbase\CachetSlackIntegration\Handlers\Events\Incident\IncidentReported;
+use Mrbase\CachetSlackIntegration\Handlers\Events\Incident\IncidentUpdated;
 
 /**
  * Class ServiceProvider
  *
- * @package Unity\CachetSlackIntegration
+ * @package Mrbase\CachetSlackIntegration
  * @author  Ulrik Nielsen <me@ulrik.co>
  */
 class ServiceProvider extends EventServiceProvider

@@ -8,16 +8,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Unity\CachetSlackIntegration\Handlers\Events\Component;
+namespace Mrbase\CachetSlackIntegration\Handlers\Events\Component;
 
 use CachetHQ\Cachet\Events\Component\ComponentWasUpdatedEvent;
 use Maknz\Slack\Facades\Slack;
-use Unity\CachetSlackIntegration\Utils;
+use Mrbase\CachetSlackIntegration\Utils;
 
 /**
  * Class ComponentUpdated
  *
- * @package Unity\CachetSlackIntegration
+ * @package Mrbase\CachetSlackIntegration
  * @author  Ulrik Nielsen <me@ulrik.co>
  */
 class ComponentUpdated
@@ -31,21 +31,10 @@ class ComponentUpdated
             return;
         }
 
-        $changes   = Utils::getChanges('component');
-        $newStatus = $event->component->status;
-        $oldStatus = isset($changes['status'])
-            ? $changes['status']
-            : $newStatus;
-
-        if ($oldStatus == $newStatus) {
-            return;
-        }
-
         $statuses = trans('cachet.components.status');
         $message  = trans('slack::messages.component.status_update', [
-            'name'       => $event->component->name,
-            'old_status' => $statuses[$oldStatus],
-            'new_status' => $statuses[$newStatus],
+            'name'   => $event->component->name,
+            'status' => $statuses[$event->component->status],
         ]);
 
         Slack::send($message);

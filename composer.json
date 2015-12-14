@@ -1,5 +1,5 @@
 {
-    "name": "unity/cachet-slack-integration",
+    "name": "mrbase/cachet-slack-integration",
     "description": "Adds Slack notifications on Cachet events.",
     "keywords": ["laravel", "cachet", "slack", "integration"],
     "homepage": "https://github.com/mrbase/cachet-slack-integration",
@@ -18,9 +18,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Unity\\CachetSlackIntegration\\": "src/"
+            "Mrbase\\CachetSlackIntegration\\": "src/"
         }
     },
-    "minimum-stability": "dev",
     "prefer-stable": true
 }

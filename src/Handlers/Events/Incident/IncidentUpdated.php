@@ -8,16 +8,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Unity\CachetSlackIntegration\Handlers\Events\Incident;
+namespace Mrbase\CachetSlackIntegration\Handlers\Events\Incident;
 
 use CachetHQ\Cachet\Events\Incident\IncidentWasUpdatedEvent;
 use Maknz\Slack\Facades\Slack;
-use Unity\CachetSlackIntegration\Utils;
+use Mrbase\CachetSlackIntegration\Utils;
 
 /**
  * Class IncidentUpdated
  *
- * @package Unity\CachetSlackIntegration
+ * @package Mrbase\CachetSlackIntegration
  * @author  Ulrik Nielsen <me@ulrik.co>
  */
 class IncidentUpdated

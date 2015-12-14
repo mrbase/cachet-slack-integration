@@ -7,14 +7,14 @@ components are added or updated.
 
 ## Install
 
-    composer require "unity/cachet-slack-integration": "1.*"
+    composer require "mrbase/cachet-slack-integration": "1.*"
 
 Add provider to your config/app.php providers
 
     'providers' => [
         ...
         Maknz\Slack\SlackServiceProvider::class,
-        Unity\CachetSlackIntegration\ServiceProvider::class,
+        Mrbase\CachetSlackIntegration\ServiceProvider::class,
     ],
 
 And to aliases:

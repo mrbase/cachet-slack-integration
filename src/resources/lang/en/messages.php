@@ -10,7 +10,7 @@
 
 return [
     'component' => [
-        'status_update' => 'Component *:name* changed status from *:old_status* to *:new_status*.'
+        'status_update' => 'Component *:name* changed status to *:status*.'
     ],
 
     'incident' => [

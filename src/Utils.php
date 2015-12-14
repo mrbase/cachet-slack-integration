@@ -8,14 +8,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Unity\CachetSlackIntegration;
+namespace Mrbase\CachetSlackIntegration;
 
 use CachetHQ\Cachet\Models\Component;
 
 /**
  * Class Utils
  *
- * @package Unity\CachetSlackIntegration
+ * @package Mrbase\CachetSlackIntegration
  * @author  Ulrik Nielsen <me@ulrik.co>
  */
 class Utils
