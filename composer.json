@@ -1,0 +1,26 @@
+{
+    "name": "unity/cachet-slack-integration",
+    "description": "Adds Slack notifications on Cachet events.",
+    "keywords": ["laravel", "cachet", "slack", "integration"],
+    "homepage": "https://github.com/mrbase/cachet-slack-integration",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ulrik Nielsen",
+            "email": "me@ulrik.co",
+            "homepage": "http://ulrik.co/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "cachethq/cachet": "2.*",
+        "maknz/slack": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unity\\CachetSlackIntegration\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
