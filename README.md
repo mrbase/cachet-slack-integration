@@ -45,4 +45,4 @@ Done, Cachet will now send notifications to your Slack channel on incident event
 In the current version only one Slack account/channel is supported. I have plans for adding support for Slack subscriptions just as you subscribe to email notifications.
 
 
-Sponsored by [Unity3D](http://unity3d.com)
+Sponsored by [Unity](http://unity3d.com)
