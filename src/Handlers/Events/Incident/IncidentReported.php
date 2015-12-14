@@ -38,7 +38,7 @@ class IncidentReported
 
         $attachment = [
             'fallback'   => trans('slack::messages.incident.created.fallback', $replacements),
-            'color'      => 'danger',
+            'color'      => Utils::statusToColor($event->incident->status),
             'title'      => trans('slack::messages.incident.created.title', $replacements),
             'title_link' => url('status-page'),
             'text'       => $event->incident->message,

@@ -54,6 +54,8 @@ class Utils
     }
 
     /**
+     * Find the status on a component.
+     *
      * @param string $componentId
      *
      * @return string
@@ -72,5 +74,29 @@ class Utils
         }
 
         return 'n/a';
+    }
+
+    /**
+     * Map status ids to a slack color.
+     *
+     * @param int $status
+     *
+     * @return string
+     */
+    public static function statusToColor($status)
+    {
+        $colormap = [
+            0 => 'good',    // 'Scheduled'
+            1 => 'danger',  // 'Investigating'
+            2 => 'warning', // 'Identified'
+            3 => 'warning', // 'Watching'
+            4 => 'good',    // 'Fixed'
+        ];
+
+        if (isset($colormap[$status])) {
+            return $colormap[$status];
+        }
+
+        return '';
     }
 }

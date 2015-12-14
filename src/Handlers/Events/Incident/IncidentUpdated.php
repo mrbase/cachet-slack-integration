@@ -41,14 +41,9 @@ class IncidentUpdated
         $statuses  = trans('cachet.incidents.status');
         $closed    = max(array_keys($statuses));
 
-        $color = 'danger';
-        $state = 'updated';
-        if ($newStatus == $closed) {
-            $color = 'good';
-            $state = 'closed';
-        } elseif (in_array($newStatus, [2, 3])) {
-            $color = 'warning';
-        }
+        $state = $newStatus == $closed
+            ? 'closed'
+            : 'updated';
 
         $replacements = [
             'id'         => $event->incident->id,
@@ -65,7 +60,7 @@ class IncidentUpdated
 
         $attachment = [
             'fallback'   => trans('slack::messages.incident.updated.fallback', $replacements),
-            'color'      => $color,
+            'color'      => Utils::statusToColor($newStatus),
             'title'      => trans('slack::messages.incident.updated.title', $replacements),
             'title_link' => url('status-page'),
             'text'       => $message,
