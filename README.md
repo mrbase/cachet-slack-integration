@@ -7,7 +7,7 @@ components are added or updated.
 
 ## Install
 
-    composer require "mrbase/cachet-slack-integration": "1.*"
+    composer require mrbase/cachet-slack-integration
 
 Add provider to your config/app.php providers
 
