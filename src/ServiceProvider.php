@@ -27,7 +27,7 @@ use Mrbase\CachetSlackIntegration\Handlers\IncidentWasUpdatedHandler;
  * @package Mrbase\CachetSlackIntegration
  * @author  Ulrik Nielsen <me@ulrik.co>
  */
-class ServiceProvider extends EventServiceProvider
+class ServiceProvider extends BaseServiceProvider
 {
     /**
      * @var array
