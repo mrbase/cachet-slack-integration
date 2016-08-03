@@ -2,12 +2,12 @@
 
 This package adds [Slack](https://slack.com) integration to your [Cachet](https://cachethq.io/) installation.
 
-When set up it will send notifications to a slack channel when a incident is either added or updated - and when 
+When set up it will send notifications to a slack channel when a incident is either added or updated - and when
 components are added or updated.
 
 ## Install
 
-    composer require "mrbase/cachet-slack-integration": "1.*"
+    composer require mrbase/cachet-slack-integration
 
 Add provider to your config/app.php providers
 
@@ -18,7 +18,7 @@ Add provider to your config/app.php providers
     ],
 
 And to aliases:
-    
+
     'aliases' => [
         ...
         'Slack' => Maknz\Slack\Facades\Slack::class,
@@ -30,14 +30,15 @@ Publish config and translations:
 
 ## Setup
 
-Edit the `.env` file and add the following, replace with your own settings: 
-    
-    SLACK_ENDPOINT=https://hooks.slack.com/services/XXXX/XXXX/XXX
-    SLACK_CHANNEL=#channelname
-    SLACK_USERNAME=Mr.Cachet
-    SLACK_ICON=:skull:
+Edit `config/slack.php` and replace the following with your own settings, update any other settings as toy see fit:
 
-Done, Cachet will now send notifications to your Slack channel on incident events. 
+    'endpoint' => '',
+
+The endpoint url is something like: https://hooks.slack.com/services/XXXX/XXXX/XXX
+
+Remember to clear cache and config.
+
+Done, Cachet will now send notifications to your Slack channel on incident events.
 
 
 ## Note
